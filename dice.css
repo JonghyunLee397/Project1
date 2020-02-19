@@ -1,0 +1,85 @@
+body{
+    background-color: bisque;
+}
+.flxr{
+    display: flex;
+    margin: auto;
+    flex-direction: row;    
+    border: 4px black solid;
+    width: 80%
+}
+.flxc{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    border: 4px black solid;
+    margin: auto;
+}
+.container{
+    height: 200px;
+    width: 80%;
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+    perspective-origin: 50%;
+    -webkit-perspective-origin:50%;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    margin: auto;
+}
+.dice{
+    width: 50%;
+    animation: rotate 3s infinite;
+    transform-style: preserve-3d;
+    height: 200px;
+    position: relative;
+    padding-top: 50px
+}
+@keyframes rotate{
+    100%{
+        transform: rotatey(360deg);
+    }
+}
+.face{
+    height: 100px;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    margin: auto;
+}
+.front{
+    transform: translateZ(0px);
+} 
+.back{
+    transform: translateZ(200px)rotateY(180deg);
+}
+.left{
+    transform: rotateY(270deg) translateX(0px);
+    transform-origin: center left;
+}
+.right{
+    transform: rotateY(-270deg) translateX(0px);
+    transform-origin: top right;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+footer{
+    text-align: center; 
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+}
+.buttons{
+    background-color: white;
+    height: 50px;
+    width: 100px;
+}
+.buttons:hover{
+    background-color: burlywood;
+    color: white;
+}
